@@ -30,3 +30,18 @@ twoSum([3,2,4], 5)
 
 class Solution {
 }
+
+// 哈希表进阶
+class Solution {
+func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
+        var dict = [Int:Int]()
+        for (i, n) in nums.enumerated() {
+            if let index = dict[n] {
+                return [index, i]
+            }else{
+            dict[target - n] = i }
+        }
+
+        return []
+    }
+}
